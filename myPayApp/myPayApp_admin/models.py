@@ -19,7 +19,7 @@ class MyPayAppUser(AbstractUser):
     )
     objects = UserManager()
 
-class BillerProfile(models.Model):
+class BillerProfile(MyPayAppUser):
 
     BILL_TYPE_CHOICES = (
         ("Postpaid", "Postpaid"),
@@ -34,7 +34,7 @@ class BillerProfile(models.Model):
     current_cash = models.BigIntegerField("Current Cash", null=False,
                                           blank=False, default=0)
 
-class UserProfile(models.Model):
+class UserProfile(MyPayAppUser):
 
     current_cash = models.BigIntegerField("Current Cash", null=False,
                                           blank=False, default=0)

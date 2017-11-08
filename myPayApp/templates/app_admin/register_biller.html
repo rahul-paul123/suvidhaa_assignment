@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Register Biller{% endblock %}
+
+{% block content %}
+  <h2>Register Biller&nbsp;&nbsp;<a href="
+  {% url 'app-admin:logout' %}">Logout</a></h2>
+  <form action="." method="post">
+    {% csrf_token %}
+    {% for field in form %}
+        <div class="section row">
+            <div class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+                <label for="inputStandard" class="col-lg-3 control-label">{{field.label|safe}}</label>
+                <div class="col-lg-8">
+                    {{field}}
+                </div>
+            </div>
+            {% for error in field.errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    <button type="submit">Save</button>
+  </form>
+{% endblock %}

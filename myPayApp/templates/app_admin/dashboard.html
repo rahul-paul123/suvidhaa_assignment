@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+  <h2>Admin Dashboard&nbsp;&nbsp;<a href="
+  {% url 'app-admin:logout' %}">Logout</a></h2>
+
+  <button><a href="{% url 'app-admin:register-user' %}">Register
+      User</a></button>
+  <button><a href="{% url 'app-admin:register-biller' %}">Register
+      Biller</a></button>
+{% endblock %}
