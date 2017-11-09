@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+  <h2>User Dashboard&nbsp;&nbsp;<a href="
+  {% url 'accounts:user-logout' %}">Logout</a></h2>
+
+  <button><a href="{% url 'accounts:change-profile' %}">Change
+      Profile</a></button>
+{#  <button><a href="{% url 'accounts:transfer-cash' %}">Transfer#}
+{#      Cash</a></button>#}
+{#  <button><a href="{% url 'accounts:pay-bill' %}">Pay Bill</a></button>#}
+{% endblock %}

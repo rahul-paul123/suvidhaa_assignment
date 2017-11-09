@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+  <h2>Biller Dashboard&nbsp;&nbsp;<a href="
+  {% url 'accounts:user-logout' %}">Logout</a></h2>
+
+  <button><a href="{% url 'accounts:change-profile' %}">Change
+      Profile</a></button>
+{#  <button><a href="{% url 'accounts:unload-cash' %}">Unload#}
+{#      Cash</a></button>#}
+{% endblock %}

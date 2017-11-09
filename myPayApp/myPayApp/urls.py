@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', dispatch, name='dispatch'),
     url(r'^app-admin/', include('myPayApp_admin.urls', namespace='app-admin')),
-
+    url(r'^accounts/', include('auth_management.urls', namespace='accounts')),
 ]
